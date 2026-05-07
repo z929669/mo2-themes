@@ -1,2 +1,4 @@
-# mo2-themes
-Themes for Mod Organizer 2.
+"Night Eyes" theme for Mod Organizer 2.
+Version: 1.2.1
+Author: ciathyza
+Updated by: z929669
