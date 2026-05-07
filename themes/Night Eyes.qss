@@ -90,7 +90,7 @@ QAbstractItemView::item:selected {
 }
 
 QAbstractItemView::item:disabled {
-	color: #808080
+	color: #505050
 }
 
 QAbstractScrollArea::corner {
@@ -107,7 +107,7 @@ QTableCornerButton::section {
 	border-right: 2px solid #181818
 }
 
-/* Toolbar -------------------------------------------------------------------- */
+/* Toolbars ------------------------------------------------------------------- */
 
 QToolBar {
 	background: #181818;
@@ -175,38 +175,42 @@ QTreeView::branch:open:has-children:has-siblings {
 	border: 0px
 }
 
-QTextEdit,
-QPlainTextEdit,
-QTextBrowser {
-	background: #000000;
-	color: #AAAAAA;
-	border: 2px solid #141414;
-	border-radius: 6px
-}
-
 QWebView {
 	background: #141414;
 	border-radius: 6px
 }
 
-/* Group Boxes ---------------------------------------------------------------- */
+/* Selected rows -------------------------------------------------------------- */
 
-QGroupBox {
-	background: #181818;
-	color: #AAAAAA;
-	padding: 24px 4px 4px 4px;
-	border: 2px solid #141414;
-	border-radius: 10px
+QAbstractItemView {
+	selection-background-color: #00335A;
+	selection-color: #33BFFF
 }
 
-QGroupBox::title {
-	color: #FFCC88;
-	subcontrol-origin: padding;
-	subcontrol-position: top left;
-	padding: 8px
+QAbstractItemView::item:selected,
+QTreeView::item:selected,
+QTreeView#modList::item:selected,
+QTreeView#espList::item:selected {
+	background: #00335A;
+	color: #33BFFF
+}
+
+QTreeView::branch:selected {
+	background: #00335A;
+	color: #33BFFF
 }
 
 /* Inputs --------------------------------------------------------------------- */
+
+QTextEdit,
+QPlainTextEdit,
+QTextBrowser {
+	background: #141414;
+	color: #AAAAAA;
+	padding: 4px;
+	border: 1px solid #242424;
+	border-radius: 6px
+}
 
 QLineEdit {
 	background: #141414;
@@ -224,7 +228,7 @@ QLineEdit:hover {
 QLineEdit:focus {
 	background: #141414;
 	color: #DDDDDD;
-	border: 2px solid #3399FF
+	border: 1px solid #FFCC88
 }
 
 QLineEdit:disabled {
@@ -235,18 +239,26 @@ QLineEdit:disabled {
 
 QSpinBox,
 QDoubleSpinBox {
-	background: #000000;
+	background: #141414;
 	color: #AAAAAA;
+	min-width: 40px;
 	min-height: 20px;
-	padding-left: 5px;
-	border: 2px solid #141414;
-	border-radius: 6px;
+	border: 1px solid #242424;
+	border-radius: 3px;
 	margin: 3px 0px 1px 0px
 }
 
 QSpinBox:hover,
 QDoubleSpinBox:hover {
 	border: 2px solid #242424
+}
+
+QSpinBox::up-button {
+	subcontrol-position: top right;
+}
+
+QSpinBox::down-button {
+	subcontrol-position: bottom right;
 }
 
 /* Dropdowns ------------------------------------------------------------------ */
@@ -287,6 +299,23 @@ QComboBox QAbstractItemView {
 	border: 0px
 }
 
+/* Group Boxes ---------------------------------------------------------------- */
+
+QGroupBox {
+	background: #181818;
+	color: #AAAAAA;
+	padding: 24px 4px 4px 4px;
+	border: 1px solid #242424;
+	border-radius: 10px
+}
+
+QGroupBox::title {
+	color: #FFCC88;
+	subcontrol-origin: padding;
+	subcontrol-position: top left;
+	padding: 8px
+}
+
 /* Buttons -------------------------------------------------------------------- */
 
 QPushButton {
@@ -315,30 +344,23 @@ QPushButton:checked {
 
 QPushButton:disabled {
 	background: #181818;
-	color: #808080
+	color: #505050
 }
 
-QCheckBox,
-QRadioButton {
-	background: transparent;
-	color: #AAAAAA;
-	spacing: 6px
-}
-
-QCheckBox:hover,
-QRadioButton:hover {
-	color: #FFCC88
-}
+/* Check Boxes & Radio Buttons ------------------------------------------------ */
 
 QCheckBox:disabled,
 QRadioButton:disabled {
-	color: #808080
+	color: #505050;
 }
 
-QCheckBox::indicator,
-QRadioButton::indicator {
-	width: 13px;
-	height: 13px
+QCheckBox::indicator:disabled {
+	border: 1px solid #505050;
+}
+
+QRadioButton::indicator:disabled {
+	border: 1px solid #505050;
+	border-radius: 8px
 }
 
 /* Scroll Bars ---------------------------------------------------------------- */
