@@ -58,7 +58,7 @@ QMainWindow::separator {
 }
 
 LinkLabel {
-	qproperty-linkcolor: #3399FF
+	qproperty-linkColor: #3399FF
 }
 
 /* Item Views ----------------------------------------------------------------- */
@@ -663,7 +663,7 @@ QTableView {
 	border: 0px
 }
 
-QListWidget::item#executablesListBox {
+QListWidget#executablesListBox::item {
 	/* fixes the black text problem on the Modify Executables window */
 	color: #D3D3D3
 }
@@ -689,10 +689,6 @@ DownloadListView QFrame#frame {
 
 DownloadListView QLabel#installLabel {
 	color: #FFCC88
-}
-
-DownloadListView QFrame:clicked {
-	background: #242424
 }
 
 /* compact downloads view */
