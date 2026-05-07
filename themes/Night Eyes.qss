@@ -13,7 +13,6 @@ QWidget {
 }
 
 QPlainTextEdit,
-QTextEdit,
 QTextBrowser,
 LogList {
 	font-family: "Cascadia Mono", "Consolas", "Courier New";
