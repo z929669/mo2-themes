@@ -1,6 +1,6 @@
 /* mo2-base-style: Windows11 */
 
-/* Night Eyes theme v1.2.0 for Mod Organizer 2 by Ciathyza */
+/* Night Eyes theme v1.2.0 for Mod Organizer 2 by Ciathyza, z929669 */
 /* https://github.com/ciathyza/mo2-themes */
 
 /* Main Window ---------------------------------------------------------------- */
@@ -298,6 +298,18 @@ QComboBox QAbstractItemView {
 	border: 0px
 }
 
+/* Filter/Error States */
+
+QAbstractItemView[filtered="true"] {
+	border: 2px solid #661111
+}
+
+QLineEdit[valid-filter="false"] {
+	background: #661111;
+	color: #FFFFFF;
+	border: 2px solid #AA3333
+}
+
 /* Group Boxes ---------------------------------------------------------------- */
 
 QGroupBox {
@@ -381,20 +393,20 @@ QScrollBar::handle:horizontal {
 }
 
 QScrollBar::add-line:horizontal {
-	background: #181818;
+	background: #242424;
 	width: 23px;
 	subcontrol-position: right;
 	subcontrol-origin: margin;
-	border: 2px solid #181818;
+	border: 2px solid #242424;
 	margin: 0px -2px -2px 0px
 }
 
 QScrollBar::sub-line:horizontal {
-	background: #181818;
+	background: #242424;
 	width: 23px;
 	subcontrol-position: left;
 	subcontrol-origin: margin;
-	border: 2px solid #181818;
+	border: 2px solid #242424;
 	border-bottom-left-radius: 6px;
 	margin: 0px 0px -2px -2px
 }
@@ -416,21 +428,21 @@ QScrollBar::handle:vertical {
 }
 
 QScrollBar::add-line:vertical {
-	background: #181818;
+	background: #242424;
 	height: 23px;
 	subcontrol-position: bottom;
 	subcontrol-origin: margin;
-	border: 2px solid #181818;
+	border: 2px solid #242424;
 	border-bottom-right-radius: 6px;
 	margin: 0px -2px -2px 0px
 }
 
 QScrollBar::sub-line:vertical {
-	background: #181818;
+	background: #242424;
 	height: 23px;
 	subcontrol-position: top;
 	subcontrol-origin: margin;
-	border: 2px solid #181818;
+	border: 2px solid #242424;
 	border-top-right-radius: 6px;
 	margin: -2px -2px 0px 0px
 }
@@ -725,16 +737,4 @@ DownloadListView[downloadView="compact"]::item {
 DownloadListView::item:hover,
 DownloadListView::item:selected {
 	padding: 0px
-}
-
-/* Filter/Error States -------------------------------------------------------- */
-
-QAbstractItemView[filtered="true"] {
-	border: 2px solid #661111
-}
-
-QLineEdit[valid-filter="false"] {
-	background: #661111;
-	color: #FFFFFF;
-	border: 2px solid #AA3333
 }
